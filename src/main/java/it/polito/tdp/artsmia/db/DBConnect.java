@@ -9,6 +9,7 @@ public class DBConnect {
 
 	private static String jdbcURL = "jdbc:mysql://localhost/artsmia";
 
+	
 	private static HikariDataSource ds = null;
 
 	public static Connection getConnection() {
@@ -17,7 +18,7 @@ public class DBConnect {
 			HikariConfig config = new HikariConfig();
 			config.setJdbcUrl(jdbcURL);
 			config.setUsername("root");
-			config.setPassword("");
+			config.setPassword("root");
 			
 			//configurazione mysql
 			config.addDataSourceProperty("cachePrepStmts", "true");
